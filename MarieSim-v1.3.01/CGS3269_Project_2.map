@@ -1,0 +1,18 @@
+ -----------------
+ Symbol | Location
+ -------+---------
+ a      |   124
+ b      |   125
+ c      |   126
+ d      |   127
+ loop   |   131
+ mult   |   130
+ one    |   12F
+ result |   12D
+ temp1  |   129
+ temp2  |   12A
+ temp3  |   12B
+ temp4  |   12C
+ z      |   128
+ zero   |   12E
+

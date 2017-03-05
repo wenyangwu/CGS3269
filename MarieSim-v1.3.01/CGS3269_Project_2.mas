@@ -1,0 +1,61 @@
+/Wenyang Wu
+Org 100
+Input
+Store a
+Input
+Store b
+Input
+Store c
+Input
+Store d
+Load a
+Store temp1
+Load b
+Store temp2
+JnS mult
+Load result
+Store temp3
+Load zero
+Store result
+Load c
+Store temp1
+Load d
+Store temp2
+JnS mult
+Load result
+Store temp4
+Load zero
+Store result
+Load temp3
+Store temp1
+Load temp4
+Store temp2
+JnS mult
+Load result
+Store z
+Load z
+Output
+Halt
+a, Dec 0
+b, Dec 0
+c, Dec 0
+d, Dec 0
+z, Dec 0
+temp1, Dec 0
+temp2, Dec 0
+temp3, Dec 0
+temp4, Dec 0
+result, Dec 0
+zero, Dec 0
+one, Dec 1
+mult, Hex 0
+loop, Load result
+Add temp1
+Store result
+Load temp2
+Subt one
+Store temp2
+Skipcond 400
+Jump loop
+JumpI mult
+

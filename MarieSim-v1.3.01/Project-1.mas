@@ -1,0 +1,35 @@
+/Justin Morrissette and Jacob Perez
+Org 0100
+Input
+Store a
+Input
+Store b
+Input
+Store c            /Now that you inputed it all, it multiplies
+loop1, Load z      /First loop a*b
+Add a
+Store z
+Load b
+Subt one
+Store b
+Skipcond 400
+Jump loop1
+Load z
+Output
+loop2, Load b     /Second loop (a*b)*c
+Add z
+Store b
+Load c
+Subt one
+Store c
+Skipcond 400
+Jump loop2
+Load b
+Output
+Halt
+one, Dec 1
+z, Dec 0
+a, Dec 0
+b, Dec 0
+c, Dec 0
+

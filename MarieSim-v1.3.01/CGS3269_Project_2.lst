@@ -1,0 +1,89 @@
+     Assembly listing for: CGS3269_Project_2.mas
+                Assembled: Wed Oct 19 22:21:58 EDT 2016
+
+         |                          /Wenyang Wu
+         |         ORG 100           
+100 5000 |         INPUT             
+101 2124 |         STORE a           
+102 5000 |         INPUT             
+103 2125 |         STORE b           
+104 5000 |         INPUT             
+105 2126 |         STORE c           
+106 5000 |         INPUT             
+107 2127 |         STORE d           
+108 1124 |         LOAD a            
+109 2129 |         STORE temp1       
+10A 1125 |         LOAD b            
+10B 212A |         STORE temp2       
+10C 0130 |         JNS mult          
+10D 112D |         LOAD result       
+10E 212B |         STORE temp3       
+10F 112E |         LOAD zero         
+110 212D |         STORE result      
+111 1126 |         LOAD c            
+112 2129 |         STORE temp1       
+113 1127 |         LOAD d            
+114 212A |         STORE temp2       
+115 0130 |         JNS mult          
+116 112D |         LOAD result       
+117 212C |         STORE temp4       
+118 112E |         LOAD zero         
+119 212D |         STORE result      
+11A 112B |         LOAD temp3        
+11B 2129 |         STORE temp1       
+11C 112C |         LOAD temp4        
+11D 212A |         STORE temp2       
+11E 0130 |         JNS mult          
+11F 112D |         LOAD result       
+120 2128 |         STORE z           
+121 1128 |         LOAD z            
+122 6000 |         OUTPUT            
+123 7000 |         HALT              
+124 0000 |  a      DEC 0             
+125 0000 |  b      DEC 0             
+126 0000 |  c      DEC 0             
+127 0000 |  d      DEC 0             
+128 0000 |  z      DEC 0             
+129 0000 |  temp1  DEC 0             
+12A 0000 |  temp2  DEC 0             
+12B 0000 |  temp3  DEC 0             
+12C 0000 |  temp4  DEC 0             
+12D 0000 |  result DEC 0             
+12E 0000 |  zero   DEC 0             
+12F 0001 |  one    DEC 1             
+130 0000 |  mult   HEX 0             
+131 112D |  loop   LOAD result       
+132 3129 |         ADD temp1         
+133 212D |         STORE result      
+134 112A |         LOAD temp2        
+135 412F |         SUBT one          
+136 212A |         STORE temp2       
+137 8400 |         SKIPCOND 400      
+138 9131 |         JUMP loop         
+139 C130 |         JUMPI mult        
+         |                          
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          a      |   124   | 101, 108
+          b      |   125   | 103, 10A
+          c      |   126   | 105, 111
+          d      |   127   | 107, 113
+          loop   |   131   | 138
+          mult   |   130   | 10C, 115, 11E, 139
+          one    |   12F   | 135
+          result |   12D   | 10D, 110, 116, 119, 11F, 131, 
+                 |         | 133
+          temp1  |   129   | 109, 112, 11B, 132
+          temp2  |   12A   | 10B, 114, 11D, 134, 136
+          temp3  |   12B   | 10E, 11A
+          temp4  |   12C   | 117, 11C
+          z      |   128   | 120, 121
+          zero   |   12E   | 10F, 118
+         --------------------------------------------------
+
+

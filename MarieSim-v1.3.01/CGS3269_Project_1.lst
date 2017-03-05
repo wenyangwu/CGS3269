@@ -1,0 +1,55 @@
+     Assembly listing for: CGS3269_Project_1.mas
+                Assembled: Sun Sep 18 16:43:38 EDT 2016
+
+         |                          /Wenyang Wu
+         |         ORG 0100          
+100 5000 |         INPUT             
+101 211D |         STORE a           
+102 5000 |         INPUT             
+103 211E |         STORE b           
+104 5000 |         INPUT             
+105 211F |         STORE c          /Now that you inputed it all, it multiplies
+106 111C |  loop1  LOAD z           /First loop a*b
+107 311D |         ADD a             
+108 211C |         STORE z           
+109 111E |         LOAD b            
+10A 411B |         SUBT one          
+10B 211E |         STORE b           
+10C 8400 |         SKIPCOND 400      
+10D 9106 |         JUMP loop1        
+10E 111C |         LOAD z            
+10F 6000 |         OUTPUT            
+110 111E |  loop2  LOAD b           /Second loop (a*b)*c
+111 311C |         ADD z             
+112 211E |         STORE b           
+113 111F |         LOAD c            
+114 411B |         SUBT one          
+115 211F |         STORE c           
+116 8400 |         SKIPCOND 400      
+117 9110 |         JUMP loop2        
+118 111E |         LOAD b            
+119 6000 |         OUTPUT            
+11A 7000 |         HALT              
+11B 0001 |  one    DEC 1             
+11C 0000 |  z      DEC 0             
+11D 0000 |  a      DEC 0             
+11E 0000 |  b      DEC 0             
+11F 0000 |  c      DEC 0             
+         |                          
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          a      |   11D   | 101, 107
+          b      |   11E   | 103, 109, 10B, 110, 112, 118
+          c      |   11F   | 105, 113, 115
+          loop1  |   106   | 10D
+          loop2  |   110   | 117
+          one    |   11B   | 10A, 114
+          z      |   11C   | 106, 108, 10E, 111
+         --------------------------------------------------
+
+
